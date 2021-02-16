@@ -6,9 +6,9 @@ The Daily Planner will allow the user to plan their day by the hour and to store
 
 # Deployment Links:
 
-# Deployed github IO: https://h-mai.github.io/week5dailyplanner/index.html
+Deployed github IO: https://h-mai.github.io/week5dailyplanner/index.html
 
-# GitHub Repository: https://github.com/h-mai/week5dailyplanner.git
+GitHub Repository: https://github.com/h-mai/week5dailyplanner.git
 
 # User Story: 
 
