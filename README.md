@@ -1,48 +1,35 @@
-# week-5-dailyplanner
+# Daily Planner 
 
-# 05 Third-Party APIs: Work Day Scheduler
+![Daily Palnner](https://github.com/h-mai/week5dailyplanner/blob/main/Assets/Work%20Day%20Scheduler.gif)
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+The Daily Planner will allow the user to plan their day by the hour and to store future plans on the browser. This application employs the use of jQuery to create dynamic HTML, moment.js to call the current date and time, and Bootstrap to style. 
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+Deployment Links:
 
-## User Story
+Deployed github IO: https://h-mai.github.io/week5dailyplanner/index.html
+GitHub Repository: https://github.com/h-mai/week5dailyplanner.git
 
-```
+User Story: 
+
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
-```
 
-## Acceptance Criteria
+Functionality and Features: 
 
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+On the index page the page will display a header with the current date and time.
 
-The following animation demonstrates the application functionality:
+The planner's parameters are based on a typical 9am-5pm day. In which there are 9 rows representing each hour for the user to type in an input. 
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+Depending on on when the user is using this app will determine whether these rows will display as "Past" (grey rows) "Present" (red rows), and "Future" (green rows) prompting the user to plan ahead, either for the present hour or in the future.
 
-## Review
+When the user clicks onto their chosen hour, they are able to input their plans for that hour. 
 
-You are required to submit the following for review:
+Then they are able to save their plans. This will then be saved onto local storage.
 
-* The URL of the deployed application.
+When the user refreshes the page, the plan will persist on the local storage and also on the row for present and future plans. Any past plans will be deleted off local storage and the row. The user is also able to overwrite their plans if needed, in which case any existing data stored will be replaced with the user's changes. 
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+
+
