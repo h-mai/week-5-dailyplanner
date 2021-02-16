@@ -1,22 +1,22 @@
 # Daily Planner 
 
-![Daily Palnner](https://github.com/h-mai/week5dailyplanner/blob/main/Assets/Work%20Day%20Scheduler.gif)
+![Daily Planner](https://github.com/h-mai/week5dailyplanner/blob/main/Assets/Work%20Day%20Scheduler.gif)
 
 The Daily Planner will allow the user to plan their day by the hour and to store future plans on the browser. This application employs the use of jQuery to create dynamic HTML, moment.js to call the current date and time, and Bootstrap to style. 
 
-Deployment Links:
+# Deployment Links:
 
-Deployed github IO: https://h-mai.github.io/week5dailyplanner/index.html
+# Deployed github IO: https://h-mai.github.io/week5dailyplanner/index.html
 
-GitHub Repository: https://github.com/h-mai/week5dailyplanner.git
+# GitHub Repository: https://github.com/h-mai/week5dailyplanner.git
 
-User Story: 
+# User Story: 
 
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 
-Functionality and Features: 
+# Functionality and Features: 
 
 On the index page the page will display a header with the current date and time.
 
