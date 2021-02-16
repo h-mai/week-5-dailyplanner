@@ -1,12 +1,10 @@
+//declaring time, and object variables.
+
 var currentHour = moment().hours();
 var currentDayShortForm = moment().format("DDMMYY");
-
-console.log(currentDayShortForm);
-
 var storedPlan = JSON.parse(localStorage.getItem(`dailyPlanner-${currentDayShortForm}`) || "{}");
 
-console.log(storedPlan);
-
+//setting schedule array for planner.
 var mySchedule = [
 
     { hour: 09, meridian: "am", note: storedPlan["9"] || "" },
@@ -21,7 +19,7 @@ var mySchedule = [
 
 ]
 
-console.log(mySchedule);
+//display current date function presented in the page header.
 
 function displayDate() {
     var currentDate = moment().format('dddd, MMMM Do');
@@ -31,6 +29,7 @@ function displayDate() {
 
 displayDate();
 
+//function to change the colours of the row to represent the past, present, and future in relation to the current time.
 function getTextAreaClass(hour) {
 
     if (hour === currentHour) {
@@ -39,13 +38,13 @@ function getTextAreaClass(hour) {
     if (hour > currentHour) {
         return "future";
     }
-
     if (hour < currentHour) {
         return "past";
     }
 
 };
 
+//creating the DOM to display the time blocks, text area and save button on the html
 function displayPlanner() {
 
     mySchedule.forEach((schedule) => {
@@ -63,7 +62,7 @@ function displayPlanner() {
         var textArea = $("<textarea>").attr({
             "class": `col-md-10 description ${getTextAreaClass(schedule.hour)}`
         });
-        
+
         textArea.val(schedule.note)
 
         hourRow.append(textArea);
@@ -82,24 +81,21 @@ function displayPlanner() {
 
         $(".container").append(hourRow);
 
+        //save button to store the textarea value in local storage in addition to having it persist on the html after refreshing the page 
         saveButton.on("click", function () {
 
             let storedPlan = localStorage.getItem(currentDayShortForm) || {};
 
             if (storedPlan) {
-            
-            storedPlan[schedule.hour] = textArea.val();
 
-            localStorage.setItem(`dailyPlanner-${currentDayShortForm}`, JSON.stringify(storedPlan));
+                storedPlan[schedule.hour] = textArea.val();
+
+                localStorage.setItem(`dailyPlanner-${currentDayShortForm}`, JSON.stringify(storedPlan));
 
             }
 
         });
-        
 
-        
-           
-        
     });
 };
 
